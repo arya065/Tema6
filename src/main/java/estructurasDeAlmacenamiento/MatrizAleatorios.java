@@ -5,7 +5,7 @@ import java.util.*;
 public class MatrizAleatorios {
 
     public static void main(String[] args) {
-        Integer[][] array = makeArray(3);
+        Integer[][] array = makeArray(4);
         fillArray(array);
         printArray(array);
     }
@@ -20,17 +20,16 @@ public class MatrizAleatorios {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[0].length; j++) {
                 boolean repeat = true;
-                int numArray = 0;
+                int randNum = 0;
                 while (repeat) {
-                    int randNum = rand.nextInt(array.length * array.length);
-                    numArray = (int) Math.pow(2, randNum);
-                    if (sameNum(array, numArray)) {
+                    randNum = rand.nextInt(array.length * array.length) + 1;
+                    if (sameNum(array, randNum)) {
                         repeat = true;
                     } else {
                         repeat = false;
                     }
                 }
-                array[i][j] = numArray;
+                array[i][j] = randNum;
             }
         }
     }
@@ -51,7 +50,7 @@ public class MatrizAleatorios {
                     if (array[i][j] == num) {
                         return true;
                     }
-                } catch (NullPointerException e){
+                } catch (NullPointerException e) {
                     return false;
                 }
             }
