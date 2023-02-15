@@ -1,6 +1,6 @@
 package ej2;
 
-public class Persona {
+public class Persona implements Comparable<Persona> {
 
     private String nombre;
     private String nif;
@@ -42,6 +42,11 @@ public class Persona {
     @Override
     public String toString() {
         return "Persona{" + "nombre=" + nombre + ", nif=" + nif + ", edad=" + edad + '}';
+    }
+
+    @Override
+    public int compareTo(Persona o) {
+        return this.nif.compareTo(o.nif);
     }
 
 }
