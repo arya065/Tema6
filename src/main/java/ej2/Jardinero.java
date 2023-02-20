@@ -23,8 +23,8 @@ public class Jardinero extends Empleado {
     }
     
 
-    @Override
-    public int compareTo(Persona o) {
-        return this.antiguedad.compareTo(o.);
-    }
+//    @Override
+//    public int compareTo(Persona o) {
+//        return this.antiguedad.;
+//    }
 }
