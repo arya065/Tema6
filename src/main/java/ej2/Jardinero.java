@@ -27,5 +27,4 @@ public class Jardinero extends Empleado {
     public int compareTo(Persona o) {
         return this.antiguedad.compareTo(o.);
     }
-    
 }
