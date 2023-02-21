@@ -42,11 +42,11 @@ public class Eja {
         return array;
     }
 
-    public static boolean recursive(Integer[] array) {
-        boolean volver = true;
-        if()
-        return volver;
-    }
+//    public static boolean recursive(Integer[] array) {
+//        boolean volver = true;
+//        if()
+//        return volver;
+//    }
 }
 //Считывает число с клавиатуры с помощью JOption. Если это не число, его следует прочитать еще раз.
 //Преобразует прочитанное число в массив символов. Он реализует рекурсивный метод, позволяющий узнать,
