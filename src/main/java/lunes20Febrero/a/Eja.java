@@ -1,13 +1,17 @@
 package lunes20Febrero.a;
 
-import java.lang.instrument.IllegalClassFormatException;
-import java.util.*;
-import javax.swing.JOptionPane;
+import java.lang.instrument.*;
+import javax.swing.*;
 
 public class Eja {
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws IllegalClassFormatException {
+        String num = leerNum();
+        Integer[] array = makeArray(num);
+        printArray(array);
+        System.out.println("");
+        boolean recurcive = recursive(array, 6, 0);
+        System.out.println(recurcive);
     }
 
     public static String leerNum() throws IllegalClassFormatException {
@@ -18,12 +22,12 @@ public class Eja {
             try {
                 for (int i = 0; i < volver.length(); i++) {
                     char tmp = volver.charAt(i);
-                    if (Character.isDigit(tmp)) {
+                    if (!Character.isDigit(tmp)) {
                         throw new IllegalClassFormatException();
                     }
                 }
                 repeat = false;
-            } catch (IllegalFormatException e) {
+            } catch (IllegalClassFormatException e) {
                 JOptionPane.showMessageDialog(null, "Numero incorrecto");
                 repeat = true;
             }
@@ -36,18 +40,29 @@ public class Eja {
         Integer[] array = new Integer[length];
         for (int i = 0; i < length; i++) {
             char num = numbers.charAt(i);
-            int number = (int) num;
+            int number = Character.digit(num, 10);
             array[i] = number;
         }
         return array;
     }
 
-//    public static boolean recursive(Integer[] array) {
-//        boolean volver = true;
-//        if()
-//        return volver;
-//    }
+    public static boolean recursive(Integer[] array, int find, int i) {
+        if (i < array.length) {
+            if (array[i] == find) {
+                return true;
+            } else {
+                return recursive(array, find, i + 1);
+            }
+        } else {
+            return false;
+        }
+    }
+
+    public static void printArray(Integer[] array) {
+        for (int i = 0; i < array.length; i++) {
+
+            System.out.print(array[i] + " - ");
+
+        }
+    }
 }
-//Считывает число с клавиатуры с помощью JOption. Если это не число, его следует прочитать еще раз.
-//Преобразует прочитанное число в массив символов. Он реализует рекурсивный метод, позволяющий узнать,
-//содержит ли массив символов какое-либо условное число.
