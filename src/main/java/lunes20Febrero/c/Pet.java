@@ -5,9 +5,7 @@ public abstract class Pet {
     private int age;
     private int mass;
 
-    public void sleep() {
-        System.out.println("Sleeping");
-    }
+    abstract void sleep();
 
     public Pet(int age, int mass) {
         this.age = age;
