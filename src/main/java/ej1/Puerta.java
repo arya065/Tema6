@@ -1,6 +1,6 @@
 package ej1;
 
-public class Puerta extends Casa {
+public class Puerta  {
 
     private int height;
     private int width;

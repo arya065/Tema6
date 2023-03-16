@@ -1,6 +1,6 @@
 package ej1;
 
-public class Calefactor extends Casa {
+public class Calefactor  {
 
     private int temperatura;
 

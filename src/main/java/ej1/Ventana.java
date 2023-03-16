@@ -1,9 +1,10 @@
 package ej1;
 
-public class Ventana extends Casa {
+public class Ventana  {
 
     private int height;
     private int width;
+    private Persiana persiana;
 
     public Ventana(int height, int width) {
         this.height = height;

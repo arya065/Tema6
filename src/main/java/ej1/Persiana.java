@@ -1,6 +1,6 @@
 package ej1;
 
-public class Persiana extends Casa {
+public class Persiana {
 
     private String material;
 
