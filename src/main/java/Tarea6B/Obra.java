@@ -1,6 +1,6 @@
 package Tarea6B;
 
-abstract class Obra {
+abstract class Obra implements Comparable<Obra> {
 
     private int id;
     private String autor;
@@ -10,4 +10,11 @@ abstract class Obra {
         this.autor = autor;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
 }
